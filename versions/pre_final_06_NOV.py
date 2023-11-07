@@ -4,14 +4,18 @@ from datetime import datetime
 import time
 
 mt2.initialize("C:/Program Files/MetaTrader 5/terminal64.exe")
-login=6060502348
-password="+cP4FbZf"
+login=6060502347
+password="V@DlJd3d"
+# login=6060502348
+# password="+cP4FbZf"
 server="ArkGlobal-Server"
 mt2.login(login, password, server)
 
 mt.initialize("C:/Program Files/MetaTrader2/terminal64.exe")
-login=6060502347
-password="V@DlJd3d"
+# login=6060502347
+# password="V@DlJd3d"
+login=6060502348
+password="+cP4FbZf"
 server="ArkGlobal-Server"
 mt.login(login, password, server)
 
@@ -20,7 +24,6 @@ print("Execution has started !!")
 
 def task():
     symbol="XAUUSD.r"
-    time.sleep(10)
     position1=mt2.positions_get(symbol="XAUUSD.r")
     position2=mt.positions_get(symbol="XAUUSD.r")
     print(position1,position2)
@@ -57,12 +60,12 @@ def task():
 
 
     symbol="XAUUSD.r"
-    lot=0.4
+    lot=0.1
     point = mt.symbol_info(symbol).point
     price = mt.symbol_info_tick(symbol).bid
     deviation=0.25  # old value 0.25
     p=45
-    sleep_time=35
+    sleep_time=30
     volatile=False
 
     price=price-deviation
