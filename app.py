@@ -26,7 +26,7 @@ def task(sleep_time):
 
 if __name__ == "__main__":
     i=0
-    sleep_time = 15
+    sleep_time = 25
     while True:
         i+=1
         task(sleep_time)
